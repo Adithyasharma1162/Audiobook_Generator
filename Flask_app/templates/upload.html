@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lission | Audio Book Generator</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"> 
+
+  <script>
+      $(document).ready(function(){
+        $(".sidenav").sidenav();
+      });
+  </script>
+</head>
+<body style="font-family: 'Poppins', sans-serif;" >
+  <!--Navigation-->
+<nav class="teal" style="padding:0px 10px;">
+  <div class="container">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Lission</a>
+      <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down "  >
+        <li class="uline" ><a href="index.php">Home</a></li>
+        <li class="uline" ><a href="login.php">Login</a></li>
+        <li class="uline" ><a href="logout.php">Logout</a></li>
+        <li class="uline" ><a href="signup.php">Signup</a></li>
+        <li class="uline" ><a href="contact.php">Request Audio Book</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<ul class="sidenav" id="mobile-nav">
+  <li><a href="index.php">Home</a></li>
+  <li><a href="login.php">Login</a></li>
+  <li><a href="logout.php">Logout</a></li>
+  <li><a href="signup.php">Projects</a></li>
+  <li><a href="contact.php">Request Audio Book</a></li>
+</ul>
+<div class="container">
+
+
+   <form action="http://127.0.0.1:5000/post_audiobook" method="POST" enctype="multipart/form-data">
+      <!-- <input type="file" name="audio_file" /> <br>
+      <input type="file" name="image_file" /> <br> -->
+      <p>Insert Image :</p>
+      <input type="file" name="image_file" accept="image/*"> <br>
+      <p>Insert PDF :</p>
+      <input type="file" name="pdf_file" accept=".pdf"> <br>
+      <p>Insert Audio :</p>
+      <input type="file" name="audio_file" accept=".mp3"> <br>
+      <p>Enter Book Name :</p>
+      <input type="text" name="book_name" placeholder="Book Name" /> <br>
+      <p>Enter Author Name :</p>
+      <input type="text" name="author_name" placeholder="Author Name" /> <br>
+      <p>Enter Book Description :</p>
+      <input type="text" name="desc" placeholder="Book Description" /> <br>
+      <!-- <input type="file" name="files[]" multiple="true" autocomplete="off" required> -->
+      <input type="submit" class="btn" value="Submit"/> <br>
+      <br>
+   </form>
+</div>
+   <footer class="teal" >
+      <div class="white-text footer-copyright" style="padding: 10px 0px;">
+        <div class="container center-align">
+          &copy; 2022 Lission, All rights reserved. <br><br>
+          <a class="white-text" href="https://in.linkedin.com/in/bhargava-sharabha-pagidimarri-7b546b199" target="_blank"><i style="font-size: 30px; padding:0px 5px" class="fa-brands fa-linkedin"></i></a>
+          <a class="white-text" href="https://github.com/BhargavaSharabha" target="_blank"><i style="font-size: 30px; padding:0px 5px" class="fa-brands fa-square-github"></i></a>
+          <a class="white-text" href="https://twitter.com/bhargava1458PBS" target="_blank"><i style="font-size: 30px; padding:0px 5px" class="fa-brands fa-square-twitter"></i></a>
+          <a class="white-text" href="https://www.instagram.com/bhargavasharabha/" target="_blank"><i style="font-size: 30px; padding:0px 5px" class="fa-brands fa-square-instagram"></i></a>
+        </div>
+      </div>
+      </footer>
+      </body>
+      </html>
